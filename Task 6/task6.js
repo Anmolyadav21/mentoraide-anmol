@@ -46,7 +46,7 @@ const car2 = {
 const car3 = {
     make : 'Toyota',
     model : "Innova Crysta",
-    model : 2021
+    year : 2021
 }
 
 cars.push(car1,car2,car3)
@@ -61,6 +61,6 @@ const car4 = {
 
 cars.push(car4)
 
-cars[2]["model"] =  "Accord"
+cars[1]["model"] =  "Accord"
 
 console.log(cars)
