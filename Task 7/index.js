@@ -2,41 +2,42 @@
 
 // Assignment 1
 function checkNumber(num){
-    if (!isNaN(num)){
-        if (num>0){
-            return ("Positive Number")
-        }
-        else if (num==0){
-            return ("Zero")
+    if (num == 0){
+        return "Zero";
+    }
+    else if (!isNaN(num)){
+        if (num > 0){
+            return "Positive Number";
         }
         else{
-            return ("Negative Number")
+            return "Negative Number";
         }
     }
     else{
-        return ("Input not a number")
+        return "Input not a number";
     }
-
 }
-
 // let userInput = prompt("Enter a number")
 // console.log(checkNumber(parseInt(userInput)))
 
-
-
-
 // Assignment 2
 function Factorial(num){
-    let ans = 1
-    for (let i = num; i>1; i--){
-       ans = ans * i  
+    if (num<=0){
+        return 'Please enter a positive number'
     }
-    return ans
+    else{
+        let ans = 1
+        for (let i = num; i>1; i--)
+        {
+            ans = ans * i  
+        }
+    return ("Factorial = " + ans)
+    }
 }
 
 // let val = prompt("Enter a value to calculate its factorial")
 // parseInt(val)
-// console.log("factorial = ",Factorial(parseInt(val)))
+// console.log(Factorial(parseInt(val)))
 
 
 
@@ -57,7 +58,6 @@ function greaterNum(num1,num2){
         return "Enter a valid number"
     }
 }
-
 // let a = prompt("enter num 1 to check greater or less")
 // let b = prompt("enter num 2 to check greater or less")
 // console.log(greaterNum(parseInt(a),parseInt(b)))
@@ -65,20 +65,21 @@ function greaterNum(num1,num2){
 
 
 // Assignment 4
-function isPalindrome(str){
-    let ans=''
-    for (let i =str.length-1; i>=0; i--){
-        ans = ans + str[i]
+function isPalindrome(str) {    
+    const new_str = str.replace(/[^a-zA-Z0-9]/g, '')
+    let ans = ''
+    for (let i = new_str.length - 1; i >= 0; i--) {
+      ans += new_str[i]
     }
-    if (ans == str){
-        return ('It is a Palindrome')
+    
+    if (ans === new_str) {
+      return ('It is a Palindrome')
+    } else {
+      return ('It is not a palindrome')
     }
-    else{
-        return ('It is not a palindrome')
-    }
-}
-// let str = prompt("Enter a string to check palindrome")
-// console.log(isPalindrome(str))
+  }
+//  const str1 = prompt("Enter a string to check palindrome or not")
+//  console.log(isPalindrome(str1));
 
 
 
@@ -114,7 +115,10 @@ function primeNumbers(number){
 function calculator(num1,num2,operator){
     if (!isNaN(num1) && !isNaN(num2) && isNaN(operator))
     {
-        if (operator == '+'){
+        if (num2 == 0 && operator == '/'){
+            return 'Cannot divide by zero'
+        }
+        else if (operator == '+'){
             return (num1 + num2)
         }
         else if (operator == '-'){
@@ -134,7 +138,6 @@ function calculator(num1,num2,operator){
         return 'Invalid input'
     }
 }
-
 // let x = prompt("enter number 1")
 // let op = prompt("enter a operator (+,-,*,/)")
 // let y = prompt("enter number 2")
@@ -144,6 +147,7 @@ function calculator(num1,num2,operator){
 
 // Assignment 7
 function countVowel(string){
+    string = string.toLowerCase()
     let count = 0
     if (isNaN(string)){
     for (i=0; i<=string.length; i++){
@@ -166,7 +170,7 @@ function countVowel(string){
 // Assignment 8
 function checkPerfectNumber(n){
     count=0
-    if (!isNaN(n)){
+    if (!isNaN(n) && n>0){
         for (let i=1; i<=n/2; i++){
             if (n % i == 0){
                 count = count + i
@@ -183,7 +187,6 @@ function checkPerfectNumber(n){
             return 'Invalid input'
         }
 }
-
 // let value = prompt("Enter a number to check number is perfect or not")
 // console.log(checkPerfectNumber(parseInt(value)))
 
@@ -191,7 +194,7 @@ function checkPerfectNumber(n){
 
 // Assignment 9 
 function fiboNumbers(range){
-    if (!isNaN(range)){
+    if (!isNaN(range) && range>0){
     let num1=0
     let num2=1
     console.log(num1)
@@ -207,7 +210,6 @@ function fiboNumbers(range){
         return 'Invalid Input'
     }
 }
-
 // let range = prompt('Enter a number to print fibonacci numbers')
 // console.log(fiboNumbers(parseInt(range)))
 
@@ -219,6 +221,5 @@ function multiplication(num){
         console.log(num + ' x ' + i +" = " + num*i)
     }
 }
-
 // let int = prompt("Enter a number to get its multiples")
 // console.log(multiplication(int))
