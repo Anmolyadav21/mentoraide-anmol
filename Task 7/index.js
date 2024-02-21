@@ -45,10 +45,10 @@ function Factorial(num){
 function greaterNum(num1,num2){
     if (!isNaN(num1) && !isNaN(num2)){
         if (num1 > num2){
-            return (num1+" is greater")
+            return num1+" is greater"
         }
         else if (num1 < num2){
-            return (num2 + " is greater")
+            return num2 + " is greater"
         }
         else{
             return "Both are equal"
