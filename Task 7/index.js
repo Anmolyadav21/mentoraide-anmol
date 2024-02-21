@@ -2,7 +2,7 @@
 
 // Assignment 1
 function checkNumber(num){
-    if (num == 0){
+    if (num === 0){
         return "Zero";
     }
     else if (!isNaN(num)){
@@ -31,7 +31,7 @@ function Factorial(num){
         {
             ans = ans * i  
         }
-    return ("Factorial = " + ans)
+    return "Factorial = " + ans
     }
 }
 
@@ -73,9 +73,9 @@ function isPalindrome(str) {
     }
     
     if (ans === new_str) {
-      return ('It is a Palindrome')
+      return 'It is a Palindrome'
     } else {
-      return ('It is not a palindrome')
+      return 'It is not a palindrome'
     }
   }
 //  const str1 = prompt("Enter a string to check palindrome or not")
@@ -119,16 +119,16 @@ function calculator(num1,num2,operator){
             return 'Cannot divide by zero'
         }
         else if (operator == '+'){
-            return (num1 + num2)
+            return num1 + num2
         }
         else if (operator == '-'){
-            return (num1 - num2)
+            return num1 - num2
         }
         else if (operator == '*'){
-            return (num1 * num2)
+            return num1 * num2
         }
         else if (operator == '/'){
-            return (num1 / num2)
+            return num1 / num2
         }
         else{
             return 'Invalid input'
@@ -155,10 +155,10 @@ function countVowel(string){
             count = count + 1
         }
     }
-    return ("Total vowels = " + count)
+    return "Total vowels = " + count
     }
     else{
-        return ('Invalid input')
+        return 'Invalid input'
     }
 }
 
@@ -166,29 +166,31 @@ function countVowel(string){
 // console.log(countVowel(string))
 
 
-
 // Assignment 8
-function checkPerfectNumber(n){
-    count=0
-    if (!isNaN(n) && n>0){
-        for (let i=1; i<=n/2; i++){
-            if (n % i == 0){
-                count = count + i
-            }
+function checkPerfectNumber(input) {
+    let n = parseInt(input);
+    if (isNaN(n) || n <= 0) {
+        n = Number(input);
+        if (isNaN(n) || n <= 0) {
+            return 'Invalid input';
         }
-        if(count == n){
-            return (n +' is a perfect number!')
+    }
+    
+    let sum = 0;
+    for (let i = 1; i <= n / 2; i++) {
+        if (n % i === 0) {
+            sum = sum + i;
         }
-        else{
-            return (n +' is not a perfect number')
-        }
-        }
-        else{
-            return 'Invalid input'
-        }
+    }
+    
+    if (sum === n) {
+        return n + ' is a perfect number!';
+    } else {
+        return n + ' is not a perfect number';
+    }
 }
 // let value = prompt("Enter a number to check number is perfect or not")
-// console.log(checkPerfectNumber(parseInt(value)))
+// console.log(checkPerfectNumber(value))
 
 
 
