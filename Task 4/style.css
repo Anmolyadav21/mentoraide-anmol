@@ -6,7 +6,7 @@
 
   html {
     font: normal 16px sans-serif;
-    color: gray;
+    color: rgb(70, 69, 69);
   }
 
   ul, nav {
@@ -119,6 +119,7 @@
   }
 
   @media (max-width: 800px) {
+
     header {
       padding: 20px 50px;
       flex-direction: column;
@@ -212,6 +213,7 @@
   .destinations .grid li.small1 {
     background-image: url(mountain4.jpg);
     flex-basis: 30%;
+    
   }
 
   .destinations .grid li.large {
@@ -236,8 +238,46 @@
     .destinations .grid li.large {
       flex-basis: 100%;
     }
+
+    .destinations .grid li.large1{
+      margin: 0px 0px;
+      flex-basis: 100%;
+    }
+
+    .destinations .grid li.small1{
+      margin-top: 0px;
+      flex-basis: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
   }
 
+  @media (max-width: 440px) {
+    .destinations .grid li.small,
+    .destinations .grid li.large {
+      flex-basis: 100%;
+    }
+
+    .destinations .grid li.large1{
+      margin: 0px 0px;
+      flex-basis: 100%;
+    }
+
+    .destinations .grid li.small1{
+      margin-top: 0px;
+      flex-basis: 100%;
+    }
+
+    hr {
+      width: 150px;
+      height: 3px;
+      background-color: #3f51b5;
+      border: 0;
+      margin-bottom: 50px;
+    }
+
+  }
 
 
   .packages .grid li {
