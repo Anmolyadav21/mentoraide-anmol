@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>Quiz-IQ</title>
+  <script>
+    function redirectTo() {
+      window.location.href = "./index.html";
+    }
+  </script>
+</head>
+
+<body>
+  <div class="landing_page_container">
+    <h2 class="logo"></h2>
+    <img src="./clockImage.png" class="clock_image">
+    <div class="quiz_container quiz_home_window">
+      <div class="quiz_home_window_left_container">
+        <h3 class="landing_page_heading">"Welcome to Quiz-IQ.      Start exploring our
+          various types of quizzes"</h3>
+        <div class="quiz_home_left_inner_below_container">
+          <!-- <h4 class="choose_subject_heading">Choose the subject -: </h4> -->
+          <img src="" class="person_image" alt="">
+        </div>
+      </div>
+
+      <div class="quiz_home_window_right_container">
+        <p class="choose_subject_heading">Choose the subject -: </p>
+        <ul class="quiz_options_container">
+          <li class="quiz_option">General Knowledge</li>
+          <li class="quiz_option">Science</li>
+          <li class="quiz_option">Mathematics</li>
+          <li class="quiz_option">Aptitude</li>
+        </ul>
+
+        <button class="start_button">Start Quiz</button>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- quiz platform -->
+    <div class="quiz_platform_container">
+      <div class="quiz_platform_header_container">
+        <div class="quiz_choosed_subject_heading">
+          <p class="quiz_subject_heading">General Knowledge</p>
+          <p class="no_of_attempted_questions">1/10</p>
+        </div>
+        <div class="timer_and_hint_container">
+          <div class="hint_container">
+            <img src="./bulb.png" class="hint_logo" alt="">
+            <div class="hint_container_box">
+              <p class="hint_p_tag">this is the hint</p>
+            </div>
+          </div>
+          <div class="timer_logo">
+            <p class="timer_clock">10s</p>
+            <img src="./stopwatch.png" class="timer_logo" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz_platform_left_container">
+        <div class="quiz_questions_container">
+          <p class="quiz_question">Q1: The process by which plants use sunlight, water, and carbon dioxide to produce
+            glucose (sugar) for food is called:</p>
+        </div>
+      </div>
+
+      <div class="quiz_platform_right_container">
+        <p class="options_heading">Options -: </p>
+        <ul class="quiz_options_container quiz_platform_options_container">
+          <li class="quiz_option options">A: General Knowledge</li>
+          <li class="quiz_option options">B: Science</li>
+          <li class="quiz_option options">C: Mathematics</li>
+          <li class="quiz_option options">D: Aptitude</li>
+        </ul>
+
+        <div class="quiz_buttons_container">
+          <!-- <button class="prev_button quiz_btn">Previous</button> -->
+          <button class="save_and_next_button quiz_btn">Save & Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="result_window_container">
+    <div class="result_window_left_container">
+      <div class="bootom_circle">
+        <div class="upper_circle">
+          <p class="quiz_result_p_tag">General Knowledge</p>
+        </div>
+      </div>
+    </div>
+    <div class="result_window_right_container">
+      <p class="total_questions_tag">Total number of questions: 10</p>
+      <p class="correct_answer_tag">Correct answers : 5</p>
+      <button class="restart_button" onclick="redirectTo()">Restart</button>
+    </div>
+  </div>
+
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
